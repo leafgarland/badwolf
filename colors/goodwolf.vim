@@ -38,7 +38,7 @@ let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
 " Normal text.
-let s:bwc.plain = ['f8f6f2', 15]
+let s:bwc.plain = ['e8e6e2', 15]
 
 " Pure and simple.
 let s:bwc.snow = ['ffffff', 15]
@@ -165,17 +165,17 @@ endif
 " call GoodWolfHL('Normal', 'plain', 'blackgravel')
 call GoodWolfHL('Normal', 'plain', 'blackestgravel')
 
-call GoodWolfHL('Folded', 'mediumgravel', 'bg', 'none')
+call s:HL('Folded', 'mediumgravel', 'bg', 'none')
 
-call GoodWolfHL('VertSplit', 'lightgravel', 'bg', 'none')
+call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 
 call GoodWolfHL('CursorLine',   '', 'darkgravel', 'none')
 call GoodWolfHL('CursorColumn', '', 'darkgravel')
 call GoodWolfHL('ColorColumn',  '', 'darkgravel')
 
-call GoodWolfHL('TabLine', 'plain', s:tabline, 'none')
-call GoodWolfHL('TabLineFill', 'plain', s:tabline, 'none')
-call GoodWolfHL('TabLineSel', 'coal', 'tardis', 'none')
+call s:HL('TabLine', 'plain', s:tabline, 'none')
+call s:HL('TabLineFill', 'plain', s:tabline, 'none')
+call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
 call GoodWolfHL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
@@ -190,8 +190,10 @@ call GoodWolfHL('IncSearch', 'coal', 'tardis',    'bold')
 
 call GoodWolfHL('Underlined', 'fg', '', 'underline')
 
-call GoodWolfHL('StatusLine',   'coal', 'tardis',     'bold')
-call GoodWolfHL('StatusLineNC', 'snow', 'deepgravel', 'none')
+call s:HL('StatusLine',   'coal', 'tardis',     'bold')
+call s:HL('StatusLineNC', 'lightgravel', 'deepgravel', 'NONE')
+call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
+call s:HL('User2', 'taffy', 'deepgravel', 'none')
 
 call GoodWolfHL('Directory', 'dirtyblonde', '', 'bold')
 
@@ -232,7 +234,7 @@ call GoodWolfHL('Todo',           'snow',   'bg', 'bold')
 call GoodWolfHL('SpecialComment', 'snow',   'bg', 'bold')
 
 " Strings are highlighted separately.
-call GoodWolfHL('String', 'lightgravel', '', 'bold')
+call s:HL('String', 'lightgravel', '', 'bold')
 
 " Turn off everything else
 call GoodWolfHL('Statement',    'plain', '', 'none')
@@ -274,13 +276,15 @@ call GoodWolfHL('PmenuSel', 'coal', 'tardis', 'bold')
 call GoodWolfHL('PmenuSbar', '', 'deepergravel')
 call GoodWolfHL('PmenuThumb', 'brightgravel')
 
+call s:HL('WildMenu', 'coal', 'tardis', 'bold')
+
 " }}}
 " Diffs {{{
 
 call GoodWolfHL('DiffDelete', 'coal', 'coal')
-call GoodWolfHL('DiffAdd',    '',     'deepergravel')
+call s:HL('DiffAdd',    '',     'deepergravel')
 call GoodWolfHL('DiffChange', '',     'darkgravel')
-call GoodWolfHL('DiffText',   'snow', 'deepergravel', 'bold')
+call s:HL('DiffText',   'snow', 'deepergravel', 'bold')
 
 " }}}
 " Spelling {{{
@@ -518,6 +522,38 @@ call GoodWolfHL('helpHyperTextJump', 'dress', '', 'none')
 
 " }}}
 
+" Typescript {{{
+
+call s:HL('typescriptInterpolation', 'brightgravel', 'darkgravel', 'none')
+call s:HL('typescriptInterpolationDelimiter', 'dirtyblonde', 'darkgravel', 'bold')
+
 " }}}
 
+" Powershell {{{
+
+call s:HL('ps1Interpolation', 'brightgravel', 'darkgravel', 'none')
+call s:HL('ps1InterpolationDelimiter', 'dirtyblonde', 'darkgravel', 'bold')
+
+" }}}
+
+" git {{{
+
+call s:HL('gitCommitSummary', 'fg', 'bg', 'bold')
+call s:HL('gitCommitDiscardedFile', 'orange', 'bg')
+call s:HL('gitCommitSelectedFile', 'lime', 'bg')
+call s:HL('gitCommitBranch', 'dirtyblonde', 'bg')
+
+" }}}
+
+" mine {{{
+
+call s:HL('BufferNumber', 'lightgravel', 'bg')
+call s:HL('BufferFlags', 'dirtyblonde', 'bg')
+call s:HL('BufferCurrentName', 'fg', 'bg', 'bold')
+call s:HL('BufferAlternateName', 'dalespale', 'bg')
+call s:HL('BufferName', 'fg', 'bg', 'none')
+
+" }}}
+
+" }}}
 
