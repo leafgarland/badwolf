@@ -32,24 +32,46 @@ let g:colors_name = "goodwolf"
 
 let s:bwc = {}
 
-" The most basic of all our colors is a slightly tweaked version of the Molokai
-" Normal text.
-let s:bwc.plain = ['ebdbb2', 15]
+if get(g:, 'goodwolf_gruv', 0)
+  let s:bwc.plain = ['ebdbb2', 15]
 
-" Pure and simple.
-let s:bwc.snow = ['f9f5d7', 15]
-let s:bwc.coal = ['0d1011', 16]
+  let s:bwc.snow = ['f9f5d7', 15]
+  let s:bwc.coal = ['0d1011', 16]
 
-" All of the Gravel colors are based on a brown from Clouds Midnight.
-let s:bwc.brightgravel   = ['d5c3a1', 252]
-let s:bwc.lightgravel    = ['a89984', 245]
-let s:bwc.gravel         = ['928374', 243]
-let s:bwc.mediumgravel   = ['7c6f64', 241]
-let s:bwc.deepgravel     = ['665c54', 238]
-let s:bwc.deepergravel   = ['504945', 236]
-let s:bwc.darkgravel     = ['32302f', 235]
-let s:bwc.blackgravel    = ['282828', 233]
-let s:bwc.blackestgravel = ['1d2021', 232]
+  let s:bwc.brightgravel   = ['d5c3a1', 252]
+  let s:bwc.lightgravel    = ['a89984', 245]
+  let s:bwc.gravel         = ['928374', 243]
+  let s:bwc.mediumgravel   = ['7c6f64', 241]
+  let s:bwc.deepgravel     = ['665c54', 238]
+  let s:bwc.deepergravel   = ['504945', 236]
+  let s:bwc.darkgravel     = ['32302f', 235]
+  let s:bwc.blackgravel    = ['282828', 233]
+  let s:bwc.blackestgravel = ['1d2021', 232]
+
+  let s:bwc.lime = ['a6cb4b', 154]
+else
+  " The most basic of all our colors is a slightly tweaked version of the Molokai
+  " Normal text.
+  let s:bwc.plain = ['e8e6e2', 15]
+
+  " Pure and simple.
+  let s:bwc.snow = ['ffffff', 15]
+  let s:bwc.coal = ['000000', 16]
+
+  " All of the Gravel colors are based on a brown from Clouds Midnight.
+  let s:bwc.brightgravel   = ['d5c3a1', 252]
+  let s:bwc.lightgravel    = ['998f84', 245]
+  let s:bwc.gravel         = ['857f78', 243]
+  let s:bwc.mediumgravel   = ['666462', 241]
+  let s:bwc.deepgravel     = ['45413b', 238]
+  let s:bwc.deepergravel   = ['35322d', 236]
+  let s:bwc.darkgravel     = ['242321', 235]
+  let s:bwc.blackgravel    = ['1c1b1a', 233]
+  let s:bwc.blackestgravel = ['141413', 232]
+
+  " A limier green from Getafe.
+  let s:bwc.lime = ['aeee00', 154]
+endif
 
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
 " my desk.
@@ -76,8 +98,6 @@ let s:bwc.tardis = ['0a9dff', 39]
 " This one's from Mustang, not Florida!
 let s:bwc.orange = ['ffa724', 214]
 
-" A limier green from Getafe.
-let s:bwc.lime = ['a6cb4b', 154]
 
 let s:bwc.green = ['86ab2b', 154]
 
