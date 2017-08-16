@@ -33,12 +33,12 @@ let g:colors_name = "goodwolf"
 let s:bwc = {}
 
 if get(g:, 'goodwolf_gruv', 0)
-  let s:bwc.plain = ['ebdbb2', 15]
 
   let s:bwc.snow = ['f9f5d7', 15]
-  let s:bwc.coal = ['0d1011', 16]
 
-  let s:bwc.brightgravel   = ['d5c3a1', 252]
+  let s:bwc.plain = ['ebdbb2', 15]
+
+  let s:bwc.brightgravel   = ['c5b391', 252]
   let s:bwc.lightgravel    = ['a89984', 245]
   let s:bwc.gravel         = ['928374', 243]
   let s:bwc.mediumgravel   = ['7c6f64', 241]
@@ -48,7 +48,32 @@ if get(g:, 'goodwolf_gruv', 0)
   let s:bwc.blackgravel    = ['282828', 233]
   let s:bwc.blackestgravel = ['1d2021', 232]
 
+  let s:bwc.coal = ['0d1011', 16]
+
   let s:bwc.lime = ['a6cb4b', 154]
+
+  let s:statusline = 'coal'
+elseif get(g:, 'goodwolf_light', 0)
+
+  let s:bwc.snow = ['ffffff', 15]
+
+  let s:bwc.plain = ['1d2021', 15]
+
+  let s:bwc.brightgravel   = ['282828', 252]
+  let s:bwc.lightgravel    = ['32302f', 245]
+  let s:bwc.gravel         = ['504945', 243]
+  let s:bwc.mediumgravel   = ['665c54', 241]
+  let s:bwc.deepgravel     = ['7c6f64', 238]
+  let s:bwc.deepergravel   = ['928374', 236]
+  let s:bwc.darkgravel     = ['a89984', 235]
+  let s:bwc.blackgravel    = ['f6f6e0', 233]
+  let s:bwc.blackestgravel = ['e5d3b1', 232]
+
+  let s:bwc.coal = ['0d1011', 16]
+
+  let s:bwc.lime = ['a6cb4b', 154]
+
+  let s:statusline = 'coal'
 else
   " The most basic of all our colors is a slightly tweaked version of the Molokai
   " Normal text.
@@ -71,6 +96,8 @@ else
 
   " A limier green from Getafe.
   let s:bwc.lime = ['aeee00', 154]
+
+  let s:statusline = 'deepergravel'
 endif
 
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
@@ -176,9 +203,10 @@ call s:HL('ColorColumn',  '', 'darkgravel')
 call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
 call s:HL('NonText',    'deepgravel', 'bg')
+call s:HL('Whitespace',    'taffy', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
 
-call s:HL('Visual',    '',  'deepgravel')
+call s:HL('Visual',    'snow',  'tardis')
 call s:HL('VisualNOS', '',  'deepgravel')
 
 call s:HL('Search',    'coal', 'dalespale', 'bold')
@@ -186,16 +214,16 @@ call s:HL('IncSearch', 'coal', 'tardis',    'bold')
 
 call s:HL('Underlined', 'fg', '', 'underline')
 
-call s:HL('StatusLine',   'brightgravel', 'coal', 'NONE')
-call s:HL('StatusLineNC', 'lightgravel', 'coal', 'NONE')
-call s:HL('User1', 'snow', 'coal', 'none')
-call s:HL('User2', 'taffy', 'coal', 'none')
+call s:HL('StatusLine',   'brightgravel', s:statusline, 'NONE')
+call s:HL('StatusLineNC', 'lightgravel', s:statusline, 'NONE')
+call s:HL('User1', 'snow', s:statusline, 'none')
+call s:HL('User2', 'taffy', s:statusline, 'none')
 
-call s:HL('VertSplit', 'coal', 'bg', 'none')
+call s:HL('VertSplit', s:statusline, 'bg', 'none')
 
-call s:HL('TabLine', 'plain', 'coal', 'none')
-call s:HL('TabLineFill', 'plain', 'coal', 'none')
-call s:HL('TabLineSel', 'dirtyblonde', 'coal', 'none')
+call s:HL('TabLine', 'plain', s:statusline, 'none')
+call s:HL('TabLineFill', 'plain', s:statusline, 'none')
+call s:HL('TabLineSel', 'dirtyblonde', s:statusline, 'none')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
@@ -206,6 +234,8 @@ call s:HL('MoreMsg',    'dalespale',   '',   'bold')
 call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
 call s:HL('Question',   'dirtyblonde', '',   'bold')
 call s:HL('WarningMsg', 'dress',       '',   'bold')
+
+call s:HL('Conceal', 'saltwatertaffy',       'bg',   'none')
 
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 call GoodWolfHL('Tag', '', '', 'bold')
@@ -221,6 +251,7 @@ call GoodWolfHL('FoldColumn', 'mediumgravel', s:gutter)
 " Cursor {{{
 
 call GoodWolfHL('Cursor',  'coal', 'tardis', 'bold')
+call s:HL('TermCursor',  'coal', 'tardis', 'bold')
 call GoodWolfHL('vCursor', 'coal', 'tardis', 'bold')
 call GoodWolfHL('iCursor', 'coal', 'tardis', 'none')
 
@@ -232,8 +263,8 @@ call s:HL('Special', 'brightgravel')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
 call GoodWolfHL('Comment',        'gravel', 'bg', 'none')
-call GoodWolfHL('Todo',           'snow',   'bg', 'bold')
-call GoodWolfHL('SpecialComment', 'snow',   'bg', 'bold')
+call s:HL('Todo',           'dalespale',   'bg', 'bold')
+call s:HL('SpecialComment', 'gravel',   'bg', 'bold')
 
 " Strings are highlighted separately.
 call s:HL('String', 'green', 'bg', 'none')
@@ -263,7 +294,7 @@ call s:HL('Typedef',      'plain', '', 'none')
 call s:HL('Exception',    'plain', '', 'none')
 
 " Not sure what 'special character in a constant' means, but let's make it pop.
-call GoodWolfHL('SpecialChar', 'plain', '', 'bold')
+call s:HL('SpecialChar', 'lime', '', 'bold')
 
 " Misc
 call GoodWolfHL('Error',  'snow',   'taffy', 'bold')
@@ -324,6 +355,11 @@ call s:HL('clamHgStatusUnknown',  'taffy', '', 'bold')
 call GoodWolfHL('level1c',  'mediumgravel', '', 'bold')
 
 " }}}
+" Sneak {{{
+
+call s:HL('Sneak',  'coal', 'orange', 'bold')
+
+" }}}
 
 " }}}
 " Filetype-specific {{{
@@ -337,6 +373,9 @@ call GoodWolfHL('clojureAnonArg', 'snow', '', 'bold')
 " CSS {{{
 
 call GoodWolfHL('cssBraces', 'lightgravel', '', 'none')
+call s:HL('cssStyle', 'fg', '', 'bold')
+call s:HL('cssClassName', 'fg', '', 'bold')
+call s:HL('cssTagName', 'fg', '', 'bold')
 
 " }}}
 " Diff {{{
@@ -457,6 +496,12 @@ call s:HL('helpHeadline', 'dirtyblonde', '', 'none')
 call s:HL('helpHeader', 'plain', '', 'bold')
 call s:HL('helpOption', 'dress', '', 'none')
 call s:HL('helpSpecial', 'dirtyblonde', '', 'none')
+call s:HL('helpCommand', 'dirtyblonde', '', 'none')
+call s:HL('helpNote', 'fg', '', 'underline')
+call s:HL('helpWarning', 'fg', '', 'bold,underline')
+call s:HL('vimEnvvar', 'dirtyblonde', '', 'none')
+call s:HL('qfFileName', 'lightgravel', '', 'none')
+call s:HL('qfSeparator', 'gravel', '', 'none')
 
 " }}}
 " Typescript {{{
@@ -507,17 +552,19 @@ call s:HL('plugRelDate', 'green', '', 'none')
 " rust {{{
 
 call s:HL('rustAttribute', 'toffee', '', 'none')
-call s:HL('rustFuncName', 'fg', '', 'bold')
-call s:HL('rustIdentifier', 'fg', '', 'bold')
 call s:HL('rustStructure', 'brightgravel', '', 'none')
 call s:HL('rustKeyword', 'brightgravel', '', 'none')
 call s:HL('rustTypedef', 'brightgravel', '', 'none')
 call s:HL('rustConditional', 'brightgravel', '', 'none')
-call s:HL('rustQuestionMark', 'orange', 'bg', 'none')
+call s:HL('rustRepeat', 'brightgravel', '', 'none')
+call s:HL('rustQuestionMark', 'taffy', 'bg', 'none')
 call s:HL('rustDerive', 'toffee', 'bg', 'none')
 call s:HL('rustDeriveTrait', 'toffee', 'bg', 'none')
 call s:HL('rustSelf', 'fg', 'bg', 'bold')
 call s:HL('rustOperator', 'brightgravel', 'bg', 'bold')
+call s:HL('rustMacro', 'fg', 'bg', 'none')
+call s:HL('rustEscape', 'lime', 'bg', 'bold')
+call s:HL('rustEscapeUnicode', 'lime', 'bg', 'bold')
 
 " }}}
 
