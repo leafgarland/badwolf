@@ -191,51 +191,51 @@ let s:gutter = 'blackgravel'
 
 " General/UI {{{
 
-call s:HL('Normal', 'plain', 'blackgravel')
+call GoodWolfHL('Normal', 'plain', 'blackgravel')
 
-call s:HL('Folded', 'mediumgravel', 'blackestgravel', 'none')
+call GoodWolfHL('Folded', 'mediumgravel', 'blackestgravel', 'none')
 
-call s:HL('CursorLine',   '', 'darkgravel', 'none')
-call s:HL('CursorLineNr',   'tardis', 'darkgravel', 'none')
-call s:HL('CursorColumn', '', 'darkgravel')
-call s:HL('ColorColumn',  '', 'darkgravel')
+call GoodWolfHL('CursorLine',   '', 'darkgravel', 'none')
+call GoodWolfHL('CursorLineNr',   'tardis', 'darkgravel', 'none')
+call GoodWolfHL('CursorColumn', '', 'darkgravel')
+call GoodWolfHL('ColorColumn',  '', 'darkgravel')
 
-call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
+call GoodWolfHL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
-call s:HL('NonText',    'deepgravel', 'bg')
-call s:HL('Whitespace',    'taffy', 'bg')
-call s:HL('SpecialKey', 'deepgravel', 'bg')
+call GoodWolfHL('NonText',    'deepgravel', 'bg')
+call GoodWolfHL('Whitespace',    'taffy', 'bg')
+call GoodWolfHL('SpecialKey', 'deepgravel', 'bg')
 
-call s:HL('Visual',    'snow',  'tardis')
-call s:HL('VisualNOS', '',  'deepgravel')
+call GoodWolfHL('Visual',    'snow',  'tardis')
+call GoodWolfHL('VisualNOS', '',  'deepgravel')
 
-call s:HL('Search',    'coal', 'dalespale', 'bold')
-call s:HL('IncSearch', 'coal', 'tardis',    'bold')
+call GoodWolfHL('Search',    'coal', 'dalespale', 'bold')
+call GoodWolfHL('IncSearch', 'coal', 'tardis',    'bold')
 
-call s:HL('Underlined', 'fg', '', 'underline')
+call GoodWolfHL('Underlined', 'fg', '', 'underline')
 
-call s:HL('StatusLine',   'brightgravel', s:statusline, 'NONE')
-call s:HL('StatusLineNC', 'lightgravel', s:statusline, 'NONE')
-call s:HL('User1', 'snow', s:statusline, 'none')
-call s:HL('User2', 'taffy', s:statusline, 'none')
+call GoodWolfHL('StatusLine',   'brightgravel', s:statusline, 'NONE')
+call GoodWolfHL('StatusLineNC', 'lightgravel', s:statusline, 'NONE')
+call GoodWolfHL('User1', 'snow', s:statusline, 'none')
+call GoodWolfHL('User2', 'taffy', s:statusline, 'none')
 
-call s:HL('VertSplit', s:statusline, 'bg', 'none')
+call GoodWolfHL('VertSplit', s:statusline, 'bg', 'none')
 
-call s:HL('TabLine', 'plain', s:statusline, 'none')
-call s:HL('TabLineFill', 'plain', s:statusline, 'none')
-call s:HL('TabLineSel', 'dirtyblonde', s:statusline, 'none')
+call GoodWolfHL('TabLine', 'plain', s:statusline, 'none')
+call GoodWolfHL('TabLineFill', 'plain', s:statusline, 'none')
+call GoodWolfHL('TabLineSel', 'dirtyblonde', s:statusline, 'none')
 
-call s:HL('Directory', 'dirtyblonde', '', 'bold')
+call GoodWolfHL('Directory', 'dirtyblonde', '', 'bold')
 
-call s:HL('Title', 'lime')
+call GoodWolfHL('Title', 'lime')
 
-call s:HL('ErrorMsg',   'taffy',       'bg', 'bold')
-call s:HL('MoreMsg',    'dalespale',   '',   'bold')
-call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
-call s:HL('Question',   'dirtyblonde', '',   'bold')
-call s:HL('WarningMsg', 'dress',       '',   'bold')
+call GoodWolfHL('ErrorMsg',   'taffy',       'bg', 'bold')
+call GoodWolfHL('MoreMsg',    'dalespale',   '',   'bold')
+call GoodWolfHL('ModeMsg',    'dirtyblonde', '',   'bold')
+call GoodWolfHL('Question',   'dirtyblonde', '',   'bold')
+call GoodWolfHL('WarningMsg', 'dress',       '',   'bold')
 
-call s:HL('Conceal', 'saltwatertaffy',       'bg',   'none')
+call GoodWolfHL('Conceal', 'saltwatertaffy',       'bg',   'none')
 
 " This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
 call GoodWolfHL('Tag', '', '', 'bold')
@@ -251,7 +251,7 @@ call GoodWolfHL('FoldColumn', 'mediumgravel', s:gutter)
 " Cursor {{{
 
 call GoodWolfHL('Cursor',  'coal', 'tardis', 'bold')
-call s:HL('TermCursor',  'coal', 'tardis', 'bold')
+call GoodWolfHL('TermCursor',  'coal', 'tardis', 'bold')
 call GoodWolfHL('vCursor', 'coal', 'tardis', 'bold')
 call GoodWolfHL('iCursor', 'coal', 'tardis', 'none')
 
@@ -259,42 +259,42 @@ call GoodWolfHL('iCursor', 'coal', 'tardis', 'none')
 " Syntax highlighting {{{
 
 " Start with a simple base.
-call s:HL('Special', 'brightgravel')
+call GoodWolfHL('Special', 'brightgravel')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
 call GoodWolfHL('Comment',        'gravel', 'bg', 'none')
-call s:HL('Todo',           'dalespale',   'bg', 'bold')
-call s:HL('SpecialComment', 'gravel',   'bg', 'bold')
+call GoodWolfHL('Todo',           'dalespale',   'bg', 'bold')
+call GoodWolfHL('SpecialComment', 'gravel',   'bg', 'bold')
 
 " Strings are highlighted separately.
-call s:HL('String', 'green', 'bg', 'none')
+call GoodWolfHL('String', 'green', 'bg', 'none')
 
 " Turn off everything else
-call s:HL('Statement',    'brightgravel', '', 'none')
-call s:HL('Keyword',      'plain', '', 'none')
-call s:HL('Conditional',  'plain', '', 'none')
-call s:HL('Operator',     'plain', '', 'none')
-call s:HL('Label',        'plain', '', 'none')
-call s:HL('Repeat',       'plain', '', 'none')
-call s:HL('Identifier',   'plain', '', 'none')
-call s:HL('Function',     'plain', '', 'none')
-call s:HL('PreProc',      'plain', '', 'none')
-call s:HL('Macro',        'plain', '', 'none')
-call s:HL('Define',       'plain', '', 'none')
-call s:HL('PreCondit',    'plain', '', 'none')
-call s:HL('Constant',     'plain', '', 'none')
-call s:HL('Character',    'plain', '', 'none')
-call s:HL('Boolean',      'plain', '', 'none')
-call s:HL('Number',       'plain', '', 'none')
-call s:HL('Float',        'plain', '', 'none')
-call s:HL('Type',         'plain', '', 'none')
-call s:HL('StorageClass', 'plain', '', 'none')
-call s:HL('Structure',    'plain', '', 'none')
-call s:HL('Typedef',      'plain', '', 'none')
-call s:HL('Exception',    'plain', '', 'none')
+call GoodWolfHL('Statement',    'brightgravel', '', 'none')
+call GoodWolfHL('Keyword',      'plain', '', 'none')
+call GoodWolfHL('Conditional',  'plain', '', 'none')
+call GoodWolfHL('Operator',     'plain', '', 'none')
+call GoodWolfHL('Label',        'plain', '', 'none')
+call GoodWolfHL('Repeat',       'plain', '', 'none')
+call GoodWolfHL('Identifier',   'plain', '', 'none')
+call GoodWolfHL('Function',     'plain', '', 'none')
+call GoodWolfHL('PreProc',      'plain', '', 'none')
+call GoodWolfHL('Macro',        'plain', '', 'none')
+call GoodWolfHL('Define',       'plain', '', 'none')
+call GoodWolfHL('PreCondit',    'plain', '', 'none')
+call GoodWolfHL('Constant',     'plain', '', 'none')
+call GoodWolfHL('Character',    'plain', '', 'none')
+call GoodWolfHL('Boolean',      'plain', '', 'none')
+call GoodWolfHL('Number',       'plain', '', 'none')
+call GoodWolfHL('Float',        'plain', '', 'none')
+call GoodWolfHL('Type',         'plain', '', 'none')
+call GoodWolfHL('StorageClass', 'plain', '', 'none')
+call GoodWolfHL('Structure',    'plain', '', 'none')
+call GoodWolfHL('Typedef',      'plain', '', 'none')
+call GoodWolfHL('Exception',    'plain', '', 'none')
 
 " Not sure what 'special character in a constant' means, but let's make it pop.
-call s:HL('SpecialChar', 'lime', '', 'bold')
+call GoodWolfHL('SpecialChar', 'lime', '', 'bold')
 
 " Misc
 call GoodWolfHL('Error',  'snow',   'taffy', 'bold')
@@ -309,15 +309,15 @@ call GoodWolfHL('PmenuSel', 'coal', 'tardis', 'bold')
 call GoodWolfHL('PmenuSbar', '', 'deepergravel')
 call GoodWolfHL('PmenuThumb', 'brightgravel')
 
-call s:HL('WildMenu', 'coal', 'tardis', 'bold')
+call GoodWolfHL('WildMenu', 'coal', 'tardis', 'bold')
 
 " }}}
 " Diffs {{{
 
-call s:HL('DiffDelete', 'coal', 'coal')
-call s:HL('DiffAdd',    'coal',     'green')
-call s:HL('DiffChange', '', 'deepergravel')
-call s:HL('DiffText',   'orange', 'deepergravel', 'none')
+call GoodWolfHL('DiffDelete', 'coal', 'coal')
+call GoodWolfHL('DiffAdd',    'coal',     'green')
+call GoodWolfHL('DiffChange', '', 'deepergravel')
+call GoodWolfHL('DiffText',   'orange', 'deepergravel', 'none')
 
 " }}}
 " Spelling {{{
@@ -344,10 +344,10 @@ call GoodWolfHL('GWStatusLineModeX', 'lime', 'deepergravel')
 " Clam {{{
 
 " hg status
-call s:HL('clamHgStatusAdded',    'lime', '', 'none')
-call s:HL('clamHgStatusModified', 'saltwatertaffy', '', 'none')
-call s:HL('clamHgStatusRemoved',  'toffee', '', 'none')
-call s:HL('clamHgStatusUnknown',  'taffy', '', 'bold')
+call GoodWolfHL('clamHgStatusAdded',    'lime', '', 'none')
+call GoodWolfHL('clamHgStatusModified', 'saltwatertaffy', '', 'none')
+call GoodWolfHL('clamHgStatusRemoved',  'toffee', '', 'none')
+call GoodWolfHL('clamHgStatusUnknown',  'taffy', '', 'bold')
 
 " }}}
 " Rainbow Parentheses {{{
@@ -357,7 +357,7 @@ call GoodWolfHL('level1c',  'mediumgravel', '', 'bold')
 " }}}
 " Sneak {{{
 
-call s:HL('Sneak',  'coal', 'orange', 'bold')
+call GoodWolfHL('Sneak',  'coal', 'orange', 'bold')
 
 " }}}
 
@@ -373,9 +373,9 @@ call GoodWolfHL('clojureAnonArg', 'snow', '', 'bold')
 " CSS {{{
 
 call GoodWolfHL('cssBraces', 'lightgravel', '', 'none')
-call s:HL('cssStyle', 'fg', '', 'bold')
-call s:HL('cssClassName', 'fg', '', 'bold')
-call s:HL('cssTagName', 'fg', '', 'bold')
+call GoodWolfHL('cssStyle', 'fg', '', 'bold')
+call GoodWolfHL('cssClassName', 'fg', '', 'bold')
+call GoodWolfHL('cssTagName', 'fg', '', 'bold')
 
 " }}}
 " Diff {{{
@@ -398,29 +398,29 @@ call GoodWolfHL('htmlTag',    'darkroast', 'bg', 'none')
 call GoodWolfHL('htmlEndTag', 'darkroast', 'bg', 'none')
 
 " Tag names
-call s:HL('htmlTagName',        'coffee', '', 'bold')
-call s:HL('htmlSpecialTagName', 'coffee', '', 'bold')
-call s:HL('htmlSpecialChar',    'lime',   '', 'none')
+call GoodWolfHL('htmlTagName',        'coffee', '', 'bold')
+call GoodWolfHL('htmlSpecialTagName', 'coffee', '', 'bold')
+call GoodWolfHL('htmlSpecialChar',    'lime',   '', 'none')
 
-call s:HL('xmlTagName',        'coffee', '', 'bold')
-call s:HL('xmlTag',        'darkroast', '', 'none')
-call s:HL('xmlEndTag',        'darkroast', '', 'none')
-call s:HL('xmlAttrib', 'coffee', '', 'none')
-call s:HL('xmlAttribPunct',    'darkroast',   '', 'none')
+call GoodWolfHL('xmlTagName',        'coffee', '', 'bold')
+call GoodWolfHL('xmlTag',        'darkroast', '', 'none')
+call GoodWolfHL('xmlEndTag',        'darkroast', '', 'none')
+call GoodWolfHL('xmlAttrib', 'coffee', '', 'none')
+call GoodWolfHL('xmlAttribPunct',    'darkroast',   '', 'none')
 
 " Attributes
 call GoodWolfHL('htmlArg', 'coffee', '', 'none')
 
 " Stuff inside an <a> tag
 
-call s:HL('htmlLink', 'lightgravel', '', 'underline')
+call GoodWolfHL('htmlLink', 'lightgravel', '', 'underline')
 
 " }}}
 " Java {{{
 
-call s:HL('javaCommentTitle', 'gravel', '')
-call s:HL('javaDocTags', 'snow', '', 'none')
-call s:HL('javaDocParam', 'plain', '', '')
+call GoodWolfHL('javaCommentTitle', 'gravel', '')
+call GoodWolfHL('javaDocTags', 'snow', '', 'none')
+call GoodWolfHL('javaDocParam', 'plain', '', '')
 
 " }}}
 " REPLs {{{
@@ -489,82 +489,82 @@ call GoodWolfHL('pythonCoding',      'plain', '', 'bold')
 " }}}
 " Vim {{{
 
-call s:HL('helpHyperTextJump', 'dress', '', 'none')
-call s:HL('helpHyperTextEntry', 'lightgravel', '', 'none')
-call s:HL('helpExample', 'coffee', '', 'none')
-call s:HL('helpHeadline', 'dirtyblonde', '', 'none')
-call s:HL('helpHeader', 'plain', '', 'bold')
-call s:HL('helpOption', 'dress', '', 'none')
-call s:HL('helpSpecial', 'dirtyblonde', '', 'none')
-call s:HL('helpCommand', 'dirtyblonde', '', 'none')
-call s:HL('helpNote', 'fg', '', 'underline')
-call s:HL('helpWarning', 'fg', '', 'bold,underline')
-call s:HL('vimEnvvar', 'dirtyblonde', '', 'none')
-call s:HL('qfFileName', 'lightgravel', '', 'none')
-call s:HL('qfSeparator', 'gravel', '', 'none')
+call GoodWolfHL('helpHyperTextJump', 'dress', '', 'none')
+call GoodWolfHL('helpHyperTextEntry', 'lightgravel', '', 'none')
+call GoodWolfHL('helpExample', 'coffee', '', 'none')
+call GoodWolfHL('helpHeadline', 'dirtyblonde', '', 'none')
+call GoodWolfHL('helpHeader', 'plain', '', 'bold')
+call GoodWolfHL('helpOption', 'dress', '', 'none')
+call GoodWolfHL('helpSpecial', 'dirtyblonde', '', 'none')
+call GoodWolfHL('helpCommand', 'dirtyblonde', '', 'none')
+call GoodWolfHL('helpNote', 'fg', '', 'underline')
+call GoodWolfHL('helpWarning', 'fg', '', 'bold,underline')
+call GoodWolfHL('vimEnvvar', 'dirtyblonde', '', 'none')
+call GoodWolfHL('qfFileName', 'lightgravel', '', 'none')
+call GoodWolfHL('qfSeparator', 'gravel', '', 'none')
 
 " }}}
 " Typescript {{{
 
-call s:HL('typescriptInterpolation', 'brightgravel', 'darkgravel', 'none')
-call s:HL('typescriptInterpolationDelimiter', 'dirtyblonde', 'darkgravel', 'bold')
+call GoodWolfHL('typescriptInterpolation', 'brightgravel', 'darkgravel', 'none')
+call GoodWolfHL('typescriptInterpolationDelimiter', 'dirtyblonde', 'darkgravel', 'bold')
 
 " }}}
 " Powershell {{{
 
-call s:HL('ps1InterpolationDelimiter', 'lime', 'bg', 'bold')
+call GoodWolfHL('ps1InterpolationDelimiter', 'lime', 'bg', 'bold')
 
 " }}}
 " git {{{
 
-call s:HL('gitCommitSummary', 'fg', 'bg', 'bold')
-call s:HL('gitCommitOverflow', 'taffy', 'bg', 'bold')
-call s:HL('gitCommitDiscardedFile', 'orange', 'bg')
-call s:HL('gitCommitSelectedFile', 'lime', 'bg')
-call s:HL('gitCommitBranch', 'dirtyblonde', 'bg')
+call GoodWolfHL('gitCommitSummary', 'fg', 'bg', 'bold')
+call GoodWolfHL('gitCommitOverflow', 'taffy', 'bg', 'bold')
+call GoodWolfHL('gitCommitDiscardedFile', 'orange', 'bg')
+call GoodWolfHL('gitCommitSelectedFile', 'lime', 'bg')
+call GoodWolfHL('gitCommitBranch', 'dirtyblonde', 'bg')
 
-call s:HL('gitrebaseCommit', 'dirtyblonde', 'bg')
-call s:HL('gitrebaseReword', 'orange', 'bg')
-call s:HL('gitrebaseSquash', 'toffee', 'bg')
-call s:HL('gitrebaseFixup', 'coffee', 'bg')
-call s:HL('gitrebaseDrop', 'taffy', 'bg')
-call s:HL('gitrebaseEdit', 'dalespale', 'bg')
+call GoodWolfHL('gitrebaseCommit', 'dirtyblonde', 'bg')
+call GoodWolfHL('gitrebaseReword', 'orange', 'bg')
+call GoodWolfHL('gitrebaseSquash', 'toffee', 'bg')
+call GoodWolfHL('gitrebaseFixup', 'coffee', 'bg')
+call GoodWolfHL('gitrebaseDrop', 'taffy', 'bg')
+call GoodWolfHL('gitrebaseEdit', 'dalespale', 'bg')
 
 " }}}
 " mine {{{
 
-call s:HL('BufferNumber', 'lightgravel', 'bg')
-call s:HL('BufferFlags', 'dirtyblonde', 'bg')
-call s:HL('BufferCurrentName', 'fg', 'bg', 'bold')
-call s:HL('BufferAlternateName', 'dalespale', 'bg')
-call s:HL('BufferName', 'fg', 'bg', 'none')
+call GoodWolfHL('BufferNumber', 'lightgravel', 'bg')
+call GoodWolfHL('BufferFlags', 'dirtyblonde', 'bg')
+call GoodWolfHL('BufferCurrentName', 'fg', 'bg', 'bold')
+call GoodWolfHL('BufferAlternateName', 'dalespale', 'bg')
+call GoodWolfHL('BufferName', 'fg', 'bg', 'none')
 
 " }}}
 " vimplug {{{
 
-call s:HL('plugH2', 'lime', '', 'none')
-call s:HL('plugName', 'toffee', '', 'none')
-call s:HL('plugSha', 'dirtyblonde', '', 'none')
-call s:HL('plugEdge', 'lightgravel', '', 'none')
-call s:HL('plugRelDate', 'green', '', 'none')
+call GoodWolfHL('plugH2', 'lime', '', 'none')
+call GoodWolfHL('plugName', 'toffee', '', 'none')
+call GoodWolfHL('plugSha', 'dirtyblonde', '', 'none')
+call GoodWolfHL('plugEdge', 'lightgravel', '', 'none')
+call GoodWolfHL('plugRelDate', 'green', '', 'none')
 
 " }}}
 " rust {{{
 
-call s:HL('rustAttribute', 'toffee', '', 'none')
-call s:HL('rustStructure', 'brightgravel', '', 'none')
-call s:HL('rustKeyword', 'brightgravel', '', 'none')
-call s:HL('rustTypedef', 'brightgravel', '', 'none')
-call s:HL('rustConditional', 'brightgravel', '', 'none')
-call s:HL('rustRepeat', 'brightgravel', '', 'none')
-call s:HL('rustQuestionMark', 'taffy', 'bg', 'none')
-call s:HL('rustDerive', 'toffee', 'bg', 'none')
-call s:HL('rustDeriveTrait', 'toffee', 'bg', 'none')
-call s:HL('rustSelf', 'fg', 'bg', 'bold')
-call s:HL('rustOperator', 'brightgravel', 'bg', 'bold')
-call s:HL('rustMacro', 'fg', 'bg', 'none')
-call s:HL('rustEscape', 'lime', 'bg', 'bold')
-call s:HL('rustEscapeUnicode', 'lime', 'bg', 'bold')
+call GoodWolfHL('rustAttribute', 'toffee', '', 'none')
+call GoodWolfHL('rustStructure', 'brightgravel', '', 'none')
+call GoodWolfHL('rustKeyword', 'brightgravel', '', 'none')
+call GoodWolfHL('rustTypedef', 'brightgravel', '', 'none')
+call GoodWolfHL('rustConditional', 'brightgravel', '', 'none')
+call GoodWolfHL('rustRepeat', 'brightgravel', '', 'none')
+call GoodWolfHL('rustQuestionMark', 'taffy', 'bg', 'none')
+call GoodWolfHL('rustDerive', 'toffee', 'bg', 'none')
+call GoodWolfHL('rustDeriveTrait', 'toffee', 'bg', 'none')
+call GoodWolfHL('rustSelf', 'fg', 'bg', 'bold')
+call GoodWolfHL('rustOperator', 'brightgravel', 'bg', 'bold')
+call GoodWolfHL('rustMacro', 'fg', 'bg', 'none')
+call GoodWolfHL('rustEscape', 'lime', 'bg', 'bold')
+call GoodWolfHL('rustEscapeUnicode', 'lime', 'bg', 'bold')
 
 " }}}
 
